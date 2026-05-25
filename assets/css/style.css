@@ -1,0 +1,136 @@
+body {
+  padding-top: 120px;
+  margin: 0;
+}
+
+/* визуальные изменения */
+
+.logo{
+  max-height: 25%;
+  max-width: 25%;
+}
+.rhombus {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background-color: rgb(250, 250, 250);
+}
+.user{
+  width: 35px;
+  height: 35px;
+}
+.bg-gray{
+  background-color: #282c32;
+}
+
+/* ! визуальные изменения ! */
+
+/* всплывающее меню */
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+.menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.menu li:hover > .submenu {
+  display: block;
+}
+.submenu li {
+  position: relative;
+  margin: 0;
+}
+
+/* ! всплывающее меню ! */
+
+/* поднятие */
+
+.feature-text {
+  transition: 0.5s;
+}
+.feature-text:hover {
+  transform: translateY(-10px);
+}
+.feature-card {
+  transition: 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ! поднятие ! */
+
+/* анимация */
+
+.animate-top {
+  animation: top 2.5s ease-in;
+}
+
+@keyframes top {
+  from {opacity: 0; transform: translatey(200px);}
+  to {opacity: 1; transform: translatey(0);}
+}
+
+.animate-exit {
+  animation: exit 2s ease-in;
+}
+
+@keyframes exit {
+  from {opacity: 0; transform: translatex(500px);}
+  to {opacity: 1; transform: translatex(0);}
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% {transform: translateY(0);}
+  50% {transform: translateY(-6px);}
+}
+.loader {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #000;
+  box-sizing: border-box;
+  animation: rotation 5s linear infinite;
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ! анимация ! */
